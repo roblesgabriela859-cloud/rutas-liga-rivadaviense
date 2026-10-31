@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rutas de la Liga Rivadaviense</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Estilos del mapa Leaflet -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Biblioteca Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+   
+<div class="encabezado">
+  <img src="imagenes/logo-liga.jpg"
+     alt="Logo de la Liga Rivadaviense"
+     class="logo-liga">
+
+    <div class="texto-encabezado">
+        <h1>Rutas de la Liga Rivadaviense</h1>
+        <p>Calculá la ruta más corta entre las canchas</p>
+    </div>
+</div>
+
+
+    <main>
+       <section>
+            <h2>Buscar recorrido</h2>
+
+            <label for="origen" class="etiqueta-origen">Club de origen:</label>
+            <select id="origen" class="select-origen"></select>
+
+            <label for="destino" class="etiqueta-destino">Club de destino:</label>
+            <select id="destino" class="select-destino"></select>
+
+            <button id="calcular">Calcular ruta</button>
+
+            <div id="resultado" aria-live="polite">
+                Seleccioná dos clubes para comenzar.
+            </div>
+        </section>
+
+        <section class="seccion-mapa">
+            <h2>Mapa del recorrido</h2>
+            <div id="mapa" style="height: 500px; width: 100%;"></div>
+            <p class="aclaracion">
+                Mapa ilustrativo. Las ubicaciones y distancias
+                deben verificarse antes de representar rutas reales.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto integrador · Algoritmo de Dijkstra</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
